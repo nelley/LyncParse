@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<properties>
+  <service-loader initializableProblemHandler="ignore"/>
+  <encodingDetectors>
+    <encodingDetector class="org.apache.tika.detect.DefaultEncodingDetector"/>
+  </encodingDetectors>
+  <translator class="org.apache.tika.language.translate.DefaultTranslator"/>
+  <detectors>
+    <detector class="org.apache.tika.detect.DefaultDetector"/>
+  </detectors>
+  <parsers>
+    <parser class="org.apache.tika.parser.DefaultParser"/>
+    <mime-exclude>image/jpeg</mime-exclude>
+    <mime-exclude>application/x-sqlite3</mime-exclude>
+    <parser-exclude class="org.apache.tika.parser.jdbc.SQLite3Parser"/>
+  </parsers>
+</properties>
